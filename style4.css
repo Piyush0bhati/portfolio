@@ -1,0 +1,126 @@
+/* Skills Page Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header */
+header {
+    background: #333;
+    padding: 1rem 0;
+    color: #fff;
+    text-align: center;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+nav a {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* Skills Section */
+.skills {
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, #e1f5fe, #e0f2f1);
+    text-align: center;
+}
+.skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+.skill {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+.skill h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.progress-bar {
+    width: 100%;
+    background: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.progress {
+    background: #00bcd4;
+    color: #fff;
+    padding: 0.5rem;
+    width: 0;
+    text-align: right;
+    border-radius: 8px;
+    animation: fillProgress 1.5s ease-in-out forwards;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    padding: 1rem 0;
+    color: #fff;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fillProgress {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .skills h2 {
+        font-size: 2rem;
+    }
+    .skill h3 {
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .skills h2 {
+        font-size: 1.8rem;
+    }
+    .skill h3 {
+        font-size: 1rem;
+    }
+}
